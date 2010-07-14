@@ -1,4 +1,15 @@
 set nocompatible
+
+
+" tell Vim where to find the autoload function:
+set runtimepath+=~/vimconfig/plugins/vim-addon-manager
+
+" activate the addons called 'vim-addon-manager', 'JSON', 'name1', 'name2'
+" This adds them to runtimepath and ensures that plugin/* and after/plugin/*
+" files are sourced
+call scriptmanager#Activate(['vim-addon-manager','JSON'])
+
+
 set backspace=indent,eol,start
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
@@ -76,3 +87,4 @@ set mouse=a		" Enable mouse usage (all modes) in terminals
 set visualbell
 
 set pastetoggle=<F12>   " Toggle insert-paste mode with F12
+
