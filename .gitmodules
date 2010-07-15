@@ -10,3 +10,6 @@
 [submodule "bundle/syntax_haml"]
 	path = bundle/syntax_haml
 	url = http://github.com/tpope/vim-haml.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
