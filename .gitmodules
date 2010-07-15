@@ -34,3 +34,6 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = http://github.com/tpope/vim-repeat.git
+[submodule "bundle/endwise"]
+	path = bundle/endwise
+	url = http://github.com/tpope/vim-endwise.git
