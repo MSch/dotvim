@@ -1,13 +1,12 @@
 set nocompatible
 
-
 " tell Vim where to find the autoload function:
-set runtimepath+=~/vimconfig/plugins/vim-addon-manager
+set runtimepath+=~/vim/plugins/vim-addon-manager
 
 " activate the addons called 'vim-addon-manager', 'JSON', 'name1', 'name2'
 " This adds them to runtimepath and ensures that plugin/* and after/plugin/*
 " files are sourced
-call scriptmanager#Activate(['vim-addon-manager','JSON'])
+call scriptmanager#Activate(['vim-addon-manager','vim-addon-manager-known-repositories','JSON', 'snipmate', 'nerdtree', 'fugitive', 'rails', 'haml', 'cucumber', 'unimpaired', 'surround', 'vividchalk', 'speeddating'])
 
 
 set backspace=indent,eol,start
@@ -17,8 +16,9 @@ set backspace=indent,eol,start
 syntax on
 
 " http://www.vim.org/scripts/script.php?script_id=415
-let g:zenburn_high_Contrast=1
-color zenburn
+" let g:zenburn_high_Contrast=1
+" color zenburn
+color vividchalk
 
 " MAC
 :if system("uname") == "Darwin\n"

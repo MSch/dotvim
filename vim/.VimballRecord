@@ -1,1 +1,0 @@
-zenburn.vba: call delete('/Users/msch/.vim/colors/zenburn.vim')
