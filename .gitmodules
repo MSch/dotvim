@@ -31,3 +31,6 @@
 [submodule "bundle/vividchalk"]
 	path = bundle/vividchalk
 	url = http://github.com/tpope/vim-vividchalk.git
+[submodule "bundle/repeat"]
+	path = bundle/repeat
+	url = http://github.com/tpope/vim-repeat.git
