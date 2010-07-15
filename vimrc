@@ -1,19 +1,27 @@
 set nocompatible
 
-" tell Vim where to find the autoload function:
-set runtimepath+=~/vim/plugins/vim-addon-manager
-
-" activate the addons called 'vim-addon-manager', 'JSON', 'name1', 'name2'
-" This adds them to runtimepath and ensures that plugin/* and after/plugin/*
-" files are sourced
-call scriptmanager#Activate(['vim-addon-manager','vim-addon-manager-known-repositories','JSON', 'snipmate', 'nerdtree', 'fugitive', 'rails', 'haml', 'cucumber', 'unimpaired', 'surround', 'vividchalk', 'speeddating'])
-
+call pathogen#runtime_append_all_bundles()
 
 set backspace=indent,eol,start
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 syntax on
+
+if has("gui_running")
+  if has("gui_gtk2")
+    " set guifont=Luxi\ Mono\ 12
+  elseif has("x11")
+    " Also for GTK 1
+    set guifont=*-lucidatypewriter-medium-r-normal-*-*-180-*-*-m-*-*
+  elseif has("gui_win32")
+    set guifont=Luxi_Mono:h12:cANSI
+  elseif has("gui_macvim")
+    set guifont=Monaco:h13
+    "let mapleader=""
+    set imd
+  endif
+endif
 
 if has("gui_running")
   color vividchalk
@@ -23,12 +31,6 @@ else
   color zenburn
 endif
 
-" MAC
-:if system("uname") == "Darwin\n"
-  set guifont=Monaco:h13
-  let mapleader="ß"
-:else
-:end
 set go-=T "remove toolbar from GUI
 set go-=m "remove menu from GUI
 
