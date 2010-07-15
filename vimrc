@@ -2,10 +2,20 @@ set nocompatible
 
 call pathogen#runtime_append_all_bundles()
 
-set backspace=indent,eol,start
+set wildmenu     " fancy command completion menu!
 
-" Vim5 and later versions support syntax highlighting. Uncommenting the next
-" line enables syntax highlighting by default.
+" Miscellaneous Options. Values:
+"   a: ":read" sets window filename
+"   A: ":write" sets window filename
+"   B: backslash has no special meaning in ":map"
+"   c: search continues from the end of the match
+"   e: automatically add <CR> to the end of executed registers
+"   F: ":write" sets buffer filename
+"   s: set buffer options on entering the buffer
+"   W: refuse to overwrite a readonly file, even with :w!
+"   Z: don't reset 'readonly' when using :w!
+set cpoptions=aABceFsWZ
+
 syntax on
 
 if has("gui_running")
@@ -18,30 +28,27 @@ if has("gui_running")
     set guifont=Luxi_Mono:h12:cANSI
   elseif has("gui_macvim")
     set guifont=Monaco:h13
-    "let mapleader=""
-    set imd
   endif
 endif
 
 if has("gui_running")
   color vividchalk
+  set go-=T "remove toolbar from GUI
+  set go-=m "remove menu from GUI
 else
   " http://www.vim.org/scripts/script.php?script_id=415
   " let g:zenburn_high_Contrast=1
   color zenburn
 endif
 
-set go-=T "remove toolbar from GUI
-set go-=m "remove menu from GUI
 
-set showmode
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" E D I T I N G   O P T I O N S
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Editing options
 syntax on       " turn on syntax highlighting
 set number      " show line numbers
 set showbreak=+ " display a + at the beginning of a wrapped line
 set showmatch   " flash the matching bracket on inserting a )]} etc
+set showmode
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -49,14 +56,16 @@ set backspace=indent,eol,start
 """ FIXME: everything works as expected without these, I'm sure
 """        that I'm just missing something
 "set cindent    " c-style language indentation
-"set autoindent " automatically indent new lines
-"set smartindent " automatically indent new lines
+set autoindent " automatically indent new lines
+set smartindent " automatically indent new lines
 
 " for most code, use 4 space indents. specific filetypes are overridden
 " in filetypes.vimrc
 set softtabstop=4 " most of the time, we want a softtabstop of 4
 set shiftwidth=4  " shift by 4 spaces when using >> and <<, etc
+set shiftround
 set expandtab     " no tabs, just spaces kthx.
+set wrap " prevent text wrapping
 
 " Using autocmd for this allows it to be reset every time you open a
 " file, which keeps overrides from being persistent
@@ -69,34 +78,17 @@ set listchars+=extends:»     " show a » when a line goes off the right
 set listchars+=precedes:«    " show a « when a line goes off the left
                              " edge of the screen
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" F O L D I N G   O P T I O N S
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set foldenable       " enable folding
-set foldlevelstart=0 " start with all folds collapsed when switching
-                     " buffers
-set foldcolumn=2     " adds two columns of fold status on the left-hand
-                     " side of the screen
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" S E A R C H   O P T I O N S
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Search options
 set ignorecase " makes search patterns case-insensitive by default
 set smartcase  " overrides ignorecase when the pattern contains
                " upper-case characters
 set incsearch  " incremental search. 'nuf said
+set gdefault   " assume the /g flag on :s to replace all matches in a line
+set hlsearch   " do highlight previously searched phrases
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" S W A P   O P T I O N S
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Swapfile directory
 set directory=~/.vim/swapfiles,/var/tmp,/tmp,.
 
-" Text Formatting -- General
-set wrap " prevent text wrapping
-set shiftwidth=2 " use indents of 2 spaces, and have them copied down lines
-set shiftround
-set expandtab
-set autoindent
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
@@ -109,13 +101,6 @@ filetype indent on
 
 set number
 set scrolloff=6
-
-" Search & Replace
-set ignorecase " make searches case-insensitive
-set smartcase "  unless they contain upper-case letters
-set incsearch " show the `best match so far' as search strings are typed
-set gdefault " assume the /g flag on :s to replace all matches in a line
-set hlsearch " do highlight previously searched phrases
 
 " Window options
 set ruler          " shows cursor position in the lower right
@@ -138,12 +123,6 @@ endif
 
 source $HOME/.vim/filetypes
 
-" The following are commented out as they cause vim to behave a lot
-" differently from regular Vi. They are highly recommended though.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set smartcase		" Do smart case matching
-set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
 set autoread            " Automatically reload
 "set hidden             " Hide buffers when they are abandoned
