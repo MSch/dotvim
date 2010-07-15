@@ -1,3 +1,4 @@
 plugins
 .netrwhist
 tags
+swapfiles/*
