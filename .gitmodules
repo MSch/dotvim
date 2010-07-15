@@ -37,3 +37,6 @@
 [submodule "bundle/endwise"]
 	path = bundle/endwise
 	url = http://github.com/tpope/vim-endwise.git
+[submodule "bundle/gist"]
+	path = bundle/gist
+	url = http://github.com/mattn/gist-vim.git
