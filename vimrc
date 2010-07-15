@@ -71,12 +71,7 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 endif
 
-" Uncomment the following to have Vim load indentation rules according to the
-" detected filetype. Per default Debian Vim only load filetype specific
-" plugins.
-if has("autocmd")
-  filetype indent on
-endif
+source $HOME/.vim/filetypes
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
