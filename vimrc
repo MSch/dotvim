@@ -15,10 +15,13 @@ set backspace=indent,eol,start
 " line enables syntax highlighting by default.
 syntax on
 
-" http://www.vim.org/scripts/script.php?script_id=415
-" let g:zenburn_high_Contrast=1
-" color zenburn
-color vividchalk
+if has("gui_running")
+  color vividchalk
+else
+  " http://www.vim.org/scripts/script.php?script_id=415
+  " let g:zenburn_high_Contrast=1
+  color zenburn
+endif
 
 " MAC
 :if system("uname") == "Darwin\n"
