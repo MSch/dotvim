@@ -1,4 +1,5 @@
 " Leaders
 map <leader>d :NERDTreeToggle<cr>
+map <leader>n :nohlsearch<cr>
 
 set pastetoggle=<F12>   " Toggle insert-paste mode with F12
