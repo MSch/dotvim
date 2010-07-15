@@ -12,4 +12,4 @@
 	url = http://github.com/tpope/vim-haml.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = http://github.com/scrooloose/nerdtree.git
