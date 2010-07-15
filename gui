@@ -15,6 +15,8 @@ if has("gui_running")
   " color vividchalk
   set go-=T "remove toolbar from GUI
   set go-=m "remove menu from GUI
+  set go-=r "hide right scrollbar
+  set go-=L "hide left scrollbar
 else
   " http://www.vim.org/scripts/script.php?script_id=415
   " let g:zenburn_high_Contrast=1
