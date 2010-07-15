@@ -28,3 +28,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = http://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/vividchalk"]
+	path = bundle/vividchalk
+	url = http://github.com/tpope/vim-vividchalk.git
