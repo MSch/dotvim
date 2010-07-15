@@ -32,14 +32,15 @@ if has("gui_running")
 endif
 
 if has("gui_running")
-  color vividchalk
+  " color vividchalk
   set go-=T "remove toolbar from GUI
   set go-=m "remove menu from GUI
 else
   " http://www.vim.org/scripts/script.php?script_id=415
   " let g:zenburn_high_Contrast=1
-  color zenburn
+  " color zenburn
 endif
+color ir_black
 
 
 
