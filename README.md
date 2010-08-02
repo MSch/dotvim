@@ -25,5 +25,3 @@ see http://github.com/mileszs/ack.vim
 ### Update Submodules
 
     git submodule foreach git pull
-
-    ln -s ../bundle/jslint/plugin/jslint plugin/jslint
