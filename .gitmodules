@@ -48,7 +48,7 @@
 	url = http://github.com/tpope/vim-pathogen.git
 [submodule "bundle/jslint.vim"]
 	path = bundle/jslint.vim
-	url = http://github.com/MSch/jslint.vim.git
+	url = http://github.com/hallettj/jslint.vim.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
