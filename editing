@@ -16,8 +16,8 @@ set smartindent " automatically indent new lines
 
 " for most code, use 4 space indents. specific filetypes are overridden
 " in filetypes.vimrc
-set softtabstop=4 " most of the time, we want a softtabstop of 4
-set shiftwidth=4  " shift by 4 spaces when using >> and <<, etc
+set softtabstop=2 " most of the time, we want a softtabstop of 4
+set shiftwidth=2  " shift by 4 spaces when using >> and <<, etc
 set shiftround
 set expandtab     " no tabs, just spaces kthx.
 set wrap " prevent text wrapping
