@@ -24,7 +24,7 @@ set wrap " prevent text wrapping
 
 " Using autocmd for this allows it to be reset every time you open a
 " file, which keeps overrides from being persistent
-autocmd FileType * set softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType * set softtabstop=2 shiftwidth=2 expandtab
 
 set list                     " show whitespace
 set listchars=tab:»·,trail:· " show tabs and trailing spaces
