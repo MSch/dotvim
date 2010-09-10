@@ -52,3 +52,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/javascript"]
+	path = bundle/javascript
+	url = http://github.com/pangloss/vim-javascript.git
