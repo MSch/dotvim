@@ -8,6 +8,7 @@ if has("gui_running")
     set guifont=Luxi_Mono:h12:cANSI
   elseif has("gui_macvim")
     set guifont=Monaco:h13
+    set fuoptions=maxvert,maxhorz
   endif
 endif
 
