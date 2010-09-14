@@ -58,3 +58,6 @@ set autoread            " Automatically reload
 set mouse=a		" Enable mouse usage (all modes) in terminals
 set visualbell
 
+
+" highlight clojure builtins
+let g:clj_highlight_builtins=1
