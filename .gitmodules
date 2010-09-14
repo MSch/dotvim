@@ -55,3 +55,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = http://github.com/pangloss/vim-javascript.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = http://github.com/wincent/Command-T.git
