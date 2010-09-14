@@ -9,6 +9,8 @@ if has("gui_running")
   elseif has("gui_macvim")
     set guifont=Monaco:h13
     set fuoptions=maxvert,maxhorz
+
+    " Mapping of Command-T MUST happen in ~/.gvimrc
   endif
 endif
 
