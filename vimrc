@@ -30,7 +30,6 @@ filetype on " enable filetype detection
 filetype plugin on
 filetype indent on
 
-set number
 set scrolloff=6
 
 " Window options

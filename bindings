@@ -2,4 +2,35 @@
 map <leader>d :NERDTreeToggle<cr>
 map <leader>n :nohlsearch<cr>
 
+" Make =====
+nnoremap <leader>1 yypVr=
+
+" strip all trailing whitespace in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" reselect the text that was just pasted so I can perform commands (like indentation) on it
+nnoremap <leader>v V`]
+
+nnoremap <tab> %
+vnoremap <tab> %
+
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+"inoremap <ESC> <nop>
+"nnoremap <ESC> <nop>
+"vnoremap <ESC> <nop>
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+
 set pastetoggle=<F12>   " Toggle insert-paste mode with F12
