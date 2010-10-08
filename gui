@@ -20,9 +20,9 @@ if has("gui_running")
   set go-=m "remove menu from GUI
   set go-=r "hide right scrollbar
   set go-=L "hide left scrollbar
+  color ir_black
 else
   " http://www.vim.org/scripts/script.php?script_id=415
   " let g:zenburn_high_Contrast=1
-  " color zenburn
+  color zenburn
 endif
-color ir_black
