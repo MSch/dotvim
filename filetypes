@@ -19,3 +19,6 @@ autocmd FileType help set nolist
 autocmd BufNewFile,BufRead ~/.vim/*  setfiletype vim
 autocmd BufNewFile,BufRead ~/.bash/* setfiletype sh
 
+au  BufNewFile,BufRead *.mustache set syntax=mustache
+au  BufNewFile,BufRead *.jst set syntax=mustache
+
