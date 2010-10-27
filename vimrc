@@ -59,3 +59,6 @@ set visualbell
 
 " highlight clojure builtins
 let g:clj_highlight_builtins=1
+
+" Disable line numbers for :TOhtml
+let g:html_number_lines = 0
