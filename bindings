@@ -32,5 +32,8 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
+map <F2> :bp<CR>
+map <F3> :bn<CR>
+
 
 set pastetoggle=<F12>   " Toggle insert-paste mode with F12
