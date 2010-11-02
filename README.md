@@ -19,6 +19,12 @@ ack.vim is included, to install ack see the installation instructions at http://
     git submodule update --init
     ln -s ~/.vim/vimrc ~/.vimrc
 
+Compile the native Command-T plugin:
+
+    cd ~/.vim/bundle/command-t/ruby/command-t
+    rvm use system # if you use rvm you need to switch to the same ruby version vim was compile with
+    ruby extconf.eb
+    make
 
 ## Usage
 
