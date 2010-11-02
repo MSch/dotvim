@@ -12,7 +12,7 @@ To use JSLint you need Spidermonkey.
 
 ### Ack
 
-see http://github.com/mileszs/ack.vim
+ack.vim is included, to install ack see the installation instructions at http://github.com/mileszs/ack.vim
 
 ## Setup
 
