@@ -26,6 +26,11 @@ Compile the native Command-T plugin:
     ruby extconf.eb
     make
 
+To generate help for all bundled plugins use
+
+    :call pathogen#helptags()
+
+
 ## Usage
 
 ### Update Submodules
