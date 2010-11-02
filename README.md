@@ -24,4 +24,8 @@ see http://github.com/mileszs/ack.vim
 
 ### Update Submodules
 
-    git submodule foreach git pull
+To update first a git-pull sets the submodule definition to the latest version. Afterwards all submodules are updated.
+
+    git pull
+    git submodule update --init
+
