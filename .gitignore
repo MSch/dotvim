@@ -2,3 +2,4 @@
 .VimballRecord
 tags
 swapfiles/*
+backupfiles/*
