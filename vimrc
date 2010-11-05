@@ -18,6 +18,9 @@ set cpoptions=aABceFsWZ
 
 syntax on
 
+" Backup directory
+set backupdir=~/.vim/backupfiles,/var/tmp,/tmp,.
+
 " Swapfile directory
 set directory=~/.vim/swapfiles,/var/tmp,/tmp,.
 
