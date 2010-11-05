@@ -62,3 +62,6 @@ let g:clj_highlight_builtins=1
 
 " Disable line numbers for :TOhtml
 let g:html_number_lines = 0
+
+set tabstop=2 shiftwidth=2 expandtab
+
