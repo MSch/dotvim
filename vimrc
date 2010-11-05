@@ -65,3 +65,6 @@ let g:clj_highlight_builtins=1
 
 " Disable line numbers for :TOhtml
 let g:html_number_lines = 0
+
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
