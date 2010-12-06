@@ -35,5 +35,15 @@ vnoremap <F1> <ESC>
 map <F2> :bp<CR>
 map <F3> :bn<CR>
 
+if has("gui_macvim")
+  map <D-/> <plug>NERDCommenterToggle<CR>
+endif
+
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
 
 set pastetoggle=<F12>   " Toggle insert-paste mode with F12
