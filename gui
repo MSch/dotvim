@@ -22,6 +22,7 @@ if has("gui_running")
   set go-=r "hide right scrollbar
   set go-=L "hide left scrollbar
   color ir_black
+  color jellybeans
 
   set cursorline
 else
