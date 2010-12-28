@@ -67,3 +67,6 @@
 [submodule "bundle/vimroom"]
 	path = bundle/vimroom
 	url = https://github.com/mikewest/vimroom.git
+[submodule "bundle/delimitMate"]
+	path = bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
