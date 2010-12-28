@@ -2,6 +2,8 @@ set nocompatible
 
 call pathogen#runtime_append_all_bundles()
 
+runtime macros/matchit.vim
+
 set wildmenu     " fancy command completion menu!
 
 " Miscellaneous Options. Values:
