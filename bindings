@@ -51,3 +51,7 @@ vmap <C-Down> ]egv
 nmap gV `[v`]
 
 set pastetoggle=<F12>   " Toggle insert-paste mode with F12
+
+" from http://peepcode.com/products/play-by-play-bernhardt
+" Seriously, guys, it's not like :W is bound to anything anyway.
+command! W :w
