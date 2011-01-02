@@ -5,3 +5,41 @@ if has("gui_macvim")
 elseif has("X11")
     map <M-t> :CommandT<CR>
 endif
+
+autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
+
+" If the parameter is a directory, cd into it
+function s:CdIfDirectory(directory)
+  let explicitDirectory = isdirectory(a:directory)
+  let directory = explicitDirectory || empty(a:directory)
+
+  if explicitDirectory
+    exe "cd " . a:directory
+  endif
+
+  if directory
+    NERDTree
+    " wincmd p
+    " bd
+  endif
+
+  if explicitDirectory
+    " wincmd p
+  else
+
+  endif
+endfunction
+
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+function s:CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
+
