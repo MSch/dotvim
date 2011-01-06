@@ -1,5 +1,8 @@
 set nocompatible
 
+let g:yankring_history_dir = '$HOME/.vim/'
+let g:yankring_history_file = 'yankring_history'
+
 call pathogen#runtime_append_all_bundles()
 
 runtime macros/matchit.vim
