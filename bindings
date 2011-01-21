@@ -6,7 +6,7 @@ map <leader>n :nohlsearch<cr>
 nnoremap <leader>1 yypVr=
 
 " strip all trailing whitespace in the current file
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
 " reselect the text that was just pasted so I can perform commands (like indentation) on it
 nnoremap <leader>v V`]
