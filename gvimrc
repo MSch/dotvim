@@ -1,9 +1,18 @@
 if has("gui_macvim")
-    macmenu File.New\ Tab key=<nop>
-    map <D-t> :CommandT<CR>
-    set lines=50 columns=120
+  macmenu File.New\ Tab key=<nop>
+  map <D-t> :CommandT<CR>
+
+  macmenu Tools.Next\ Error key=<nop>
+  macmenu Tools.Previous\ Error key=<nop>
+
+  " switch to previous buffer
+  map <C-D-Left> :bp<CR>
+  " switch to next buffer
+  map <C-D-Right> :bN<CR>
+
+  set lines=50 columns=120
 elseif has("X11")
-    map <M-t> :CommandT<CR>
+  map <M-t> :CommandT<CR>
 endif
 
 autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
