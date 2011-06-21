@@ -76,3 +76,9 @@
 [submodule "bundle/textobj-rubyblock"]
 	path = bundle/textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "bundle/cocoa"]
+	path = bundle/cocoa
+	url = https://github.com/msanders/cocoa.vim.git
+[submodule "bundle/markdown"]
+	path = bundle/markdown
+	url = https://github.com/jnwhiteh/vim-markdown
