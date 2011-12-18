@@ -28,20 +28,12 @@ function s:CdIfDirectory(directory)
   let explicitDirectory = isdirectory(a:directory)
   let directory = explicitDirectory || empty(a:directory)
 
+  if empty(expand("<amatch>"))
+    NERDTree
+  endif
+
   if explicitDirectory
     exe "cd " . a:directory
-  endif
-
-  if directory
-    " NERDTree
-    " wincmd p
-    " bd
-  endif
-
-  if explicitDirectory
-    " wincmd p
-  else
-
   endif
 endfunction
 
