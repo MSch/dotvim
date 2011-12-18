@@ -10,6 +10,10 @@ if has("gui_macvim")
   " switch to next buffer
   map <C-D-Right> :bN<CR>
 
+  " delimitMate fixes
+  imap <M-Left> <Plug>delimitMateC-Left
+  imap <M-Right> <Plug>delimitMateC-Right
+
   set lines=50 columns=120
 elseif has("X11")
   map <M-t> :CommandT<CR>
@@ -27,7 +31,7 @@ function s:CdIfDirectory(directory)
   endif
 
   if directory
-    NERDTree
+    " NERDTree
     " wincmd p
     " bd
   endif
