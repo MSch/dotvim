@@ -13,6 +13,8 @@ if has("gui_macvim")
   " delimitMate fixes
   imap <M-Left> <Plug>delimitMateC-Left
   imap <M-Right> <Plug>delimitMateC-Right
+  imap <D-Left> <Plug>delimitMateHome
+  imap <D-Right> <Plug>delimitMateEnd
 
   set lines=50 columns=120
 elseif has("X11")
